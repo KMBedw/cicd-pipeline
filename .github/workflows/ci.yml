@@ -1,4 +1,4 @@
-name: Docker Image CI
+name: CI Pipeline
 
 on:
   push:
@@ -20,5 +20,6 @@ jobs:
 
     - name: Build the Docker image
       run: docker build -t cicd-pipeline .
+
     - name: Push to Dockerhub
       run: docker push edwinko/cicd-pipeline:latest
